@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/lol', function () {
-    return view('welcome');
+
+Auth::routes();
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::get('companies', 'CompaniesController@index')->name('companies.index');
 });
+
+
+Route::get('/home', 'HomeController@index')->name('home');
