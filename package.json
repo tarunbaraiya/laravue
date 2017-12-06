@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "bulma": "^0.6.1",
+    "vee-validate": "^2.0.0-rc.25",
     "vue-router": "^3.0.1"
   }
 }

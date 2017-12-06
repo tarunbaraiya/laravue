@@ -1072,7 +1072,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(49);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -1082,11 +1082,11 @@ module.exports = __webpack_require__(49);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_companies_CompaniesIndex_vue__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_companies_CompaniesIndex_vue__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_companies_CompaniesIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_companies_CompaniesIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue__);
 __webpack_require__(12);
 
@@ -1104,10 +1104,11 @@ var routes = [{
     components: {
         companiesIndex: __WEBPACK_IMPORTED_MODULE_1__components_companies_CompaniesIndex_vue___default.a
     }
-}, { path: '/admin/companies/create', component: __WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue___default.a, name: 'createCompany' }, { path: '/admin/companies/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue___default.a, name: 'editCompany' }];
+}, { path: 'companies/create', component: __WEBPACK_IMPORTED_MODULE_2__components_companies_CompaniesCreate_vue___default.a, name: 'createCompany' }, { path: 'companies/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_companies_CompaniesEdit_vue___default.a, name: 'editCompany' }];
 
-var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ routes: routes });
-
+var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
+    routes: routes
+});
 var app = new Vue({ router: router }).$mount('#app');
 
 /***/ }),
@@ -45415,15 +45416,16 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 40 */
+/* 40 */,
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(41)
+var __vue_script__ = __webpack_require__(42)
 /* template */
-var __vue_template__ = __webpack_require__(42)
+var __vue_template__ = __webpack_require__(43)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45463,7 +45465,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45544,7 +45546,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45666,15 +45668,15 @@ if (false) {
 }
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(44)
+var __vue_script__ = __webpack_require__(45)
 /* template */
-var __vue_template__ = __webpack_require__(45)
+var __vue_template__ = __webpack_require__(46)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45714,7 +45716,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45778,7 +45780,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     methods: {
-        saveForm: function saveForm() {
+        saveForm: function saveForm(event) {
             event.preventDefault();
             var app = this;
             var newCompany = app.company;
@@ -45793,7 +45795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45825,7 +45827,7 @@ var render = function() {
           {
             on: {
               submit: function($event) {
-                _vm.saveForm()
+                _vm.saveForm($event)
               }
             }
           },
@@ -45979,15 +45981,15 @@ if (false) {
 }
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(47)
+var __vue_script__ = __webpack_require__(48)
 /* template */
-var __vue_template__ = __webpack_require__(48)
+var __vue_template__ = __webpack_require__(49)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -46027,11 +46029,53 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 
@@ -46059,7 +46103,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     methods: {
-        saveForm: function saveForm() {
+        saveForm: function saveForm(event) {
             event.preventDefault();
             var app = this;
             var newCompany = app.company;
@@ -46074,16 +46118,189 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c(
+          "router-link",
+          { staticClass: "btn btn-default", attrs: { to: "/" } },
+          [_vm._v("Back")]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [
+        _vm._v("Edit Company "),
+        _c("b", [_vm._v(_vm._s(_vm.company.name))])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-body" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                _vm.saveForm($event)
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-xs-12 form-group" }, [
+                _c("label", { staticClass: "control-label" }, [
+                  _vm._v("Company name")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.company.name,
+                      expression: "company.name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.company.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.company, "name", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-xs-12 form-group" }, [
+                _c("label", { staticClass: "control-label" }, [
+                  _vm._v("Company address")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.company.address,
+                      expression: "company.address"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.company.address },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.company, "address", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-xs-12 form-group" }, [
+                _c("label", { staticClass: "control-label" }, [
+                  _vm._v("Company website")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.company.website,
+                      expression: "company.website"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.company.website },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.company, "website", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-xs-12 form-group" }, [
+                _c("label", { staticClass: "control-label" }, [
+                  _vm._v("Company email")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|email",
+                      expression: "'required|email'"
+                    },
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.company.email,
+                      expression: "company.email"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.company.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.company, "email", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(0, false, false)
+          ]
+        )
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 form-group" }, [
+        _c("button", { staticClass: "btn btn-success" }, [_vm._v("Update")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -46094,7 +46311,7 @@ if (false) {
 }
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

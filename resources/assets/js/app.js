@@ -16,10 +16,14 @@ const routes = [
             companiesIndex: CompaniesIndex
         }
     },
-    {path: '/admin/companies/create', component: CompaniesCreate, name: 'createCompany'},
-    {path: '/admin/companies/edit/:id', component: CompaniesEdit, name: 'editCompany'},
-]
+    {path: 'companies/create', component: CompaniesCreate, name: 'createCompany'},
+    {path: 'companies/edit/:id', component: CompaniesEdit, name: 'editCompany'},
+];
 
-const router = new VueRouter({ routes })
 
-const app = new Vue({ router }).$mount('#app')
+
+
+const router = new VueRouter({
+    routes:routes,
+});
+const app = new Vue({ router }).$mount('#app');
